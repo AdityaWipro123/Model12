@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # === Load the trained model ===
-model = joblib.load("D:/CostEstApp/Model/Model12.pkl")
+model = joblib.load("./CostEstApp/Model/Model12.pkl")
 
 # === Define encoding mappings ===
 cushioning_map = {'CC': 0, 'CH': 1, 'NC': 2}
@@ -17,7 +17,7 @@ mounting_map = {'TM+RE': 0,'CM+RE' : 1,'CM+RM' :2,'CC+RE' : 3,'SPL' : 4}
 
 # === Define input headers (must match training model) ===
 input_headers = [
-    "Pressure", "Bore", "Rod diameter", "Stroke","Piston_Thickness","CEC_Thickness","HEC-OD","HEC_Thickness","Tube_OD","Rod_Length","Cushioning", 
+    "Pressure", "Bore", "Rod diameter", "Stroke","CEC_Thickness","HEC-OD","HEC_Thickness","Rod_Length","Cushioning", 
     "BearingY-N","Cyl Type","Mounting"
 ]
 
@@ -52,11 +52,9 @@ pressure = slider_with_input("Pressure", 100, 500, 10, 250)
 bore = slider_with_input("Bore", 10, 500, 1, 100)
 rod_dia = slider_with_input("Rod diameter", 10, 500, 1, 75)
 stroke = slider_with_input("Stroke", 100, 5000, 1, 750)
-piston_thickness = slider_with_input("Piston_Thickness", 10, 500, 1, 100)
 cec_thickness = slider_with_input("CEC_Thickness", 10, 500, 1, 100)
 hec_od = slider_with_input("HEC-OD", 10, 500, 1, 100)
 hec_thickness = slider_with_input("HEC-Thickness", 10, 500, 1, 100)
-tube_od = slider_with_input("Tube_OD", 10, 500, 1, 100)
 rod_length = slider_with_input("Rod_Length", 100, 5000, 1, 750)
 
 
