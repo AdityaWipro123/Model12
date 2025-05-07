@@ -82,7 +82,7 @@ if st.button("Predict Cost 💰"):
     # ]], columns=input_headers)
 
     input_data = pd.DataFrame([[
-        pressure, bore, rod_dia, stroke,piston_thickness,cec_thickness,hec_od,hec_thickness,tube_od, rod_length,
+        pressure, bore, rod_dia, stroke,cec_thickness,hec_od,hec_thickness,rod_length,
         cushioning_map[cushioning],
         bearing_map[bearing],
         cyltype_map[cyl_type], 
